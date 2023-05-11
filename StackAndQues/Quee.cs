@@ -29,6 +29,14 @@ namespace StackAndQues
                 temp.next = newNode;
             }
         }
+        public void Dequeue()
+        {
+            while (top != null)
+            {
+                Console.WriteLine($"start: {top.data}");
+                top = top.next;
+            }
+        }
 
         public void DisplayQueue()
         {

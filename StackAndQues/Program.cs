@@ -17,7 +17,8 @@
             queue.Push(30);
             queue.Push(70);
             queue.DisplayQueue();
-
+            queue.Dequeue();
+            queue.DisplayQueue();
 
         }
     }

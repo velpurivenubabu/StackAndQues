@@ -12,7 +12,13 @@
             stack.DisplayStack();
             stack.Peek_Pop();
             stack.DisplayStack();
-          
+            Queue queue = new Queue();
+            queue.Push(56);
+            queue.Push(30);
+            queue.Push(70);
+            queue.DisplayQueue();
+
+
         }
     }
 }

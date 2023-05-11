@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Xml.Linq;
 
 namespace StackAndQues
 {
-    internal class Stack
+    internal class Queue
     {
         public Node top;
         public void Push(int data)
@@ -16,24 +15,26 @@ namespace StackAndQues
 
             newNode.data = data;
             newNode.next = null;
-            newNode.next = top;
-            top = newNode;
-        }
-
-        
-        public void Peek_Pop()
-        {
-            while (top != null)
+            if (top == null)
             {
-                Console.WriteLine($"peek: {top.data}");
-                top = top.next;
+                top = newNode;
+            }
+            else
+            {
+                Node temp = top;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = newNode;
             }
         }
-        public void DisplayStack()
+
+        public void DisplayQueue()
         {
             if (top == null)
             {
-                Console.WriteLine("Stack is empty");
+                Console.WriteLine("Queue is empty");
             }
             else
             {

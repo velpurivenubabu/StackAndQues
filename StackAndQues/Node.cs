@@ -11,5 +11,6 @@ namespace StackAndQues
         public int data;
         public Node next;
     }
+    
 }
 
